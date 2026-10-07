@@ -180,3 +180,55 @@ body {
   margin-top: 40px;
   font-size: 0.9rem;
 }
+/*Tabletas*/
+@media (max-width: 768px) {
+  .header-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .navegacion ul {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/*Mobiles*/
+@media (max-width: 480px) {
+  .navegacion ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .titulo-seccion {
+    font-size: 1.5rem;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+  
+  .tarjeta-imagen img {
+    height: 200px;
+  }
+}
