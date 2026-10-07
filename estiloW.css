@@ -124,3 +124,46 @@ a :hover {
     color: #0044cc;
     border-color: #0044cc;
 }
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .contenedor {
+        padding: 20px;
+    }
+}
+
+/*Mobiles */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .contenedor {
+        padding: 15px;
+    }
+
+    #lista-resultados figure {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    #lista-resultados figure img {
+        width: 100px;
+        height: 140px;
+    }
+
+    #lista-resultados figcaption {
+        align-items: center;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
