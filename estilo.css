@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px; 
+}
+
+header{ /* general, trabaja los headers de toda la pagina [cambiar estilo de ser nesesario] */ 
+    background-color: aquamarine;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+nav{ /*general, trabaja todos los nav para que sean flex */ 
+    display: flex;
+}
+nav a { /*general, trabaja todos los nav para que sean flex */
+    font-weight: 600;
+    padding: 10px;
+}
+.opcionesmenu{ /*general, trabaja todos los "nav a" para que se alinen */
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+#menuinicio{ /* aparte con intenciones "general", trae lo que lleva a la pagina de inicio
+    (donde aparecen los libros y asi), trae elementos de "perfil"  */
+    align-self: flex-start;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.iniciar{ /* aparte, trae elementos de "inicio el que es mi index, ordena los elemetos para que se queden en el centro"  */
+    margin-top: 1rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vh;
+    text-align: center;
+}
+.iniciar a{ /* aparte, elementos de "inicio", pero con el "a" */
+    margin: 1vh;
+
+}
+.iniciar input{ /* aparte, elementos de "inicio", pero con "input" */
+    margin: 1vh;
+}
+
+.opcionesmenuperfil{ /* aparte, elementos de "perfil", alinea las opciones del perfil, no cuenta "menu_inicio" */
+    align-self: end;
+    display: flex;
+}
+
+.informacionperfil{ /* aparte, elementos de "perfil", elinea la informacion del perfil (imagenes y texto) */
+    align-items: center;
+    display: flex;
+}
+.informacionperfil h2{ /* aparte, elementos de "perfil", elinea el texto de "informacion_perfil" */
+    margin-left: 2rem;
+}

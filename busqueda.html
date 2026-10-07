@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Libros</title>
+    <link rel="stylesheet" href="../css/estiloW.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Buscador de Libros</h1>
+        <p>Escribe el título, autor o palabra clave:</p>
+        
+        <!-- Apunta a resultados.html y envía el parámetro 'busqueda' -->
+        <form action="../fas/resultados.html" method="GET">
+            <input type="text" name="busqueda" placeholder="Ej. El Principito, Cervantes..." required>
+            <br>
+            <a href="./resultados.html">Buscar</a>
+            <a href="./inicio.html">Cancelar</a>
+        </form>
+    </div>
+
+</body>
+</html>

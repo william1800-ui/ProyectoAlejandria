@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Libros</title>
+    <link rel="stylesheet" href="../css/estiloW.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h2>Catálogo de Libros</h2>
+        <p>Buscaste: <strong id="texto-buscado"></strong></p>
+        
+        <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
+
+        <!-- Contenedor donde aparecerán los <figure> -->
+        <div id="lista-resultados">
+            <p>Buscando libros...</p>
+        </div>
+
+        <a href="./busqueda.html" class="volver">&larr; Volver al buscador</a>
+    </div>
+
+    <script>
+        // Base de datos de libros con rutas locales de imagen (ej. en tu carpeta ./imagenes/)
+        const baseDatosLibros = [
+            { 
+                titulo: "Cien años de soledad", 
+                autor: "Gabriel García Márquez", 
+                descripcion: "La novela emblemática del realismo mágico en Macondo.", 
+                imagen: "../imagenes/cienaños.jpg" 
+            },
+            { 
+                titulo: "Don Quijote de la Mancha", 
+                autor: "Miguel de Cervantes", 
+                descripcion: "Las aventuras del hidalgo ingenioso y su fiel escudero.", 
+                imagen: "../imagenes/quijote.jpg" 
+            },
+            { 
+                titulo: "La ciudad y la ciudad", 
+                autor: "China Mieville", 
+                descripcion: "Novela de misterio sobre dos ciudades en un mismo plano", 
+                imagen: "../imagenes/ciudadyciudad.jpg" 
+            },
+            {
+                titulo:"1984",
+                autor: "George Orwell",
+                descripcion: "una distopia dictatorial",
+                imagen : "../imagenes/1984.jpg"
+            },
+            {
+                titulo:"Baldor",
+                autor: "???",
+                descripcion: "Matematicas yei",
+                imagen : "../imagenes/baldor.jpg"
+            }
+        ];
+
+        // Obtener el término buscado de la URL
+        const parametrosURL = new URLSearchParams(window.location.search);
+        const terminoBuscado = parametrosURL.get('busqueda') || '';
+        document.getElementById('texto-buscado').textContent = terminoBuscado;
+
+        // Filtrar datos
+        const resultados = baseDatosLibros.filter(libro => 
+            libro.titulo.toLowerCase().includes(terminoBuscado.toLowerCase()) ||
+            libro.autor.toLowerCase().includes(terminoBuscado.toLowerCase()) ||
+            libro.descripcion.toLowerCase().includes(terminoBuscado.toLowerCase())
+        );
+
+        // Renderizar usando la estructura <figure> y <figcaption>
+        const contenedorResultados = document.getElementById('lista-resultados');
+        contenedorResultados.innerHTML = ''; 
+
+        if (resultados.length === 0) {
+            contenedorResultados.innerHTML = '<p>No se encontraron libros que coincidan con tu búsqueda.</p>';
+        } else {
+            resultados.forEach(libro => {
+                const figura = document.createElement('figure');
+                
+                figura.innerHTML = `
+                    <img src="${libro.imagen}" alt="${libro.titulo}">
+                    <figcaption>
+                        <h3 class="libro-titulo">${libro.titulo}</h3>
+                        <span class="libro-autor">Autor: ${libro.autor}</span>
+                        <p class="libro-desc">${libro.descripcion}</p>
+                    </figcaption>
+                `;
+                
+                contenedorResultados.appendChild(figura);
+            });
+        }
+    </script>
+
+</body>
+</html>

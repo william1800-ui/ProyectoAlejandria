@@ -1,0 +1,126 @@
+/* Estilos rústicos, limpios y centrados */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    box-sizing: border-box;
+}
+
+.contenedor {
+    background: #ffffff;
+    padding: 30px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 4px 4px 0px #333; /* Sombra rústica tipo bloque */
+}
+.contenedor a{
+    color: #fff;
+}
+
+h1, h2 {
+    color: #111;
+    margin-top: 0;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #333;
+    font-size: 16px;
+    margin-bottom: 15px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+a {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a :hover {
+    background-color: #555;
+}
+
+/* Contenedor de la lista de resultados */
+#lista-resultados {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Diseño centrado y ordenado para <figure> */
+#lista-resultados figure {
+    background: #fff;
+    border: 2px solid #333;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    box-shadow: 2px 2px 0px #333;
+}
+
+#lista-resultados figure img {
+    width: 90px;
+    height: 125px;
+    object-fit: cover;
+    border: 1px solid #333;
+    flex-shrink: 0;
+}
+
+/* Estilos para el <figcaption> */
+#lista-resultados figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.libro-titulo {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0044cc;
+}
+
+.libro-autor {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+    font-style: italic;
+}
+
+.libro-desc {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.4;
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+}
+
+.volver:hover {
+    color: #0044cc;
+    border-color: #0044cc;
+}
