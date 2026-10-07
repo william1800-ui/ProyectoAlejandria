@@ -58,3 +58,63 @@ nav a { /*general, trabaja todos los nav para que sean flex */
 .informacionperfil h2{ /* aparte, elementos de "perfil", elinea el texto de "informacion_perfil" */
     margin-left: 2rem;
 }
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .informacionperfil {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .informacionperfil h2 {
+        margin-left: 0;
+    }
+
+    .iniciar {
+        min-width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav a,
+    .opcionesmenu {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .opcionesmenuperfil {
+        flex-direction: column;
+        width: 100%;
+        align-self: center;
+    }
+
+    .iniciar input,
+    .iniciar a {
+        width: 100%;
+        max-width: 280px;
+        box-sizing: border-box;
+        display: block;
+        margin: 8px auto;
+    }
+}
